@@ -158,6 +158,9 @@ main .row:first-child{
   .prog::-moz-progress-bar {
     background-color: #329ad1;
   }
+  .prog::-ms-fill{
+    background-color: #329ad1;
+  }
 
 /*- mouse animation */
 .scroll-downs {
