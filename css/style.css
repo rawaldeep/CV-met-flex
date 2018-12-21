@@ -1,0 +1,320 @@
+body,html{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    color: #403E40;
+    margin: 0;
+  scroll-behavior: smooth;
+}
+#wrapper{
+    width: 100%;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-flow: row wrap;
+    overflow: hidden;
+}
+.navbar{
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.navbar .navlist{
+    display: flex;
+    list-style-type: none;
+    width: 25%;
+}
+.navlist .nav-item {
+  float: left;
+  padding: 8px 1.5em;
+  text-decoration: none;
+  display: flex;
+  align-self: flex-end;
+}
+.nav-item .nav-link{
+    float: left;
+        color: dimgray;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 1s ease
+}
+.nav-item .nav-link:hover{
+        text-decoration:underline;
+        transform: scale(1.1);
+}
+.row{
+    width: 100vw;
+    padding-bottom: 2em;
+    float: left;
+}
+main .row:first-child{
+    height: 100vh;
+}
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../images/business-computer-contemporary-669996.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(1px) brightness(70%);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.banner{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.banner .hero{
+    margin: auto;
+    color: #fff;
+    width: 50vw;
+    padding: 10px;
+    top: 30vh;
+    display: flex; 
+    justify-content: center;
+    flex-flow: column wrap;
+    text-align: center;
+    position: relative;
+}
+.hero .head{ line-height: 0; font-size: 4em; align-self: center;}
+.hero .lead{ font-size: 1.3em;}
+.head{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.sub-heading{
+    display: flex;
+    justify-content: center;
+    align-content: flex-start; 
+    font-size: 1.5em; 
+    text-decoration: underline #329ad1;
+}
+.lead{
+    font-size: 1.2rem;
+}
+
+.download img{
+    width: 1.5rem; 
+    float: left;
+    margin: 0 1rem;
+}
+.download a{
+    color: #403E40;
+    font-size: 1.3rem;
+}
+.container{
+    width: 1150px;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 15px;
+    margin: 0 auto;
+}
+.skill-list, .skill-grid{
+    list-style: none;
+}
+.skill-grid{
+    display: flex;
+    justify-content: space-around;
+}
+.skill-list li{
+    padding: 10px;
+    color: #f3f3f3;
+}
+.skill-list li span{
+    top: -2em;
+    left: 2em;
+    position: relative;
+}
+.skill-grid li{
+    color: #403E40;
+    float: left;
+    background-color: #e0e0e0;
+    padding: 15px;
+    transition: ease 0.5s;
+}
+.skill-grid li:hover {
+    transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.prog{
+  background-color: #f3f3f3;
+  color: #f3f3f3;
+  border: 0;
+  height: 3em;
+  width: 100%;
+}
+.prog::-webkit-progress-bar {
+    background-color: #e0eaf0;
+  }
+  .prog::-webkit-progress-value {
+    background-color: #329ad1;
+  }
+  .prog::-moz-progress-bar {
+    background-color: #329ad1;
+  }
+
+/*- mouse animation */
+.scroll-downs {
+    position: relative;
+    top: 3em;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    
+    width :34px;
+    height: 55px;
+  }
+  .mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid whitesmoke;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+  }
+  .scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: whitesmoke;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+  }
+  @keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+  }
+  
+  .bg{
+      background-color: #f9f9f9;
+  } 
+  .img{
+      width: 30%;
+      float: left;
+  }
+  .img img{ width: 300px;}
+  .desc{
+      width: 70%;
+      float: left;
+  }
+  .footer{
+      width: 100vw;
+      float: left;
+      background-color:#403E40;
+      color: whitesmoke;
+      text-align: center;
+  }
+  .footer .foot a{
+      color: whitesmoke;
+      font-size: 3rem;
+      font-weight: bold;
+  }
+  .footer .foot{
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 30em;
+    padding-bottom: 2em;
+  }
+  @media only screen and (max-width: 600px) and (min-width:300px) {
+    .hero .head {
+        line-height: 1;
+        font-size: 2.5em;
+        text-align: center;}
+        .container {
+            width: 90%;
+        }
+        .navbar{ display: none;}
+      main .row .container .lead{
+          text-align: justify;
+      } 
+      .skill-list{
+          padding: 0;
+          margin: 0;
+      }
+      .skill-grid {
+        display: inline-grid;
+        justify-content: center;
+        grid-row-gap: 0.5em;
+    }
+      .skill-list li {
+        padding: 0px;
+    }
+    main .row:first-child {
+        height: auto;
+    }
+    .download img {
+        width: 1rem;
+        margin: 0 0.5rem;
+    }
+    .download a{
+        font-size: 1rem;
+    }
+    .footer{
+        display: inline-grid;
+    justify-content: center;
+    padding-bottom: 4em;
+    }
+    .footer .foot {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        width: 20em;}
+  }
+  @media only screen and (max-width: 1100px) and (min-width:600px) {
+     .banner .hero{ top:10vh;}
+    .hero .head {
+
+        line-height: 1;
+        font-size: 2.5em;
+        text-align: center;}
+        .container {
+            width: 90%;
+        }
+        .navbar{ display: none;}
+      main .row .container .lead{
+          text-align: justify;
+      } 
+      .skill-list{
+          padding: 0;
+          margin: 0;
+      }
+      .skill-grid {
+        display: inline-grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-column-gap: 1.5em;
+    justify-content: center;
+    grid-row-gap: 0.5em;
+    }
+      .skill-list li {
+        padding: 0px;
+    }
+    main .row:first-child {
+        height: auto;
+    }
+    .download img {
+        width: 1rem;
+        margin: 0 0.5rem;
+    }
+    .download a{
+        font-size: 1rem;
+    }
+    .footer{
+        display: inline-grid;
+    justify-content: center;
+    padding-bottom: 4em;
+    }
+    .footer .foot {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        width: 20em;}
+  }
